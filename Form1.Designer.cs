@@ -62,11 +62,14 @@
             this.B_OrderPizza = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.GB_Size.SuspendLayout();
             this.GB_Crust_Type.SuspendLayout();
             this.GB_Toppings.SuspendLayout();
             this.GB_WhereTo.SuspendLayout();
             this.GB_OrderSamary.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // Makeyorpizza
@@ -76,7 +79,7 @@
             this.Makeyorpizza.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Makeyorpizza.Font = new System.Drawing.Font("Ravie", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Makeyorpizza.ForeColor = System.Drawing.Color.Red;
-            this.Makeyorpizza.Location = new System.Drawing.Point(301, 25);
+            this.Makeyorpizza.Location = new System.Drawing.Point(259, 9);
             this.Makeyorpizza.Name = "Makeyorpizza";
             this.Makeyorpizza.Size = new System.Drawing.Size(595, 63);
             this.Makeyorpizza.TabIndex = 0;
@@ -170,11 +173,11 @@
             this.RB_Thinkcrust.Font = new System.Drawing.Font("Ink Free", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RB_Thinkcrust.Location = new System.Drawing.Point(51, 76);
             this.RB_Thinkcrust.Name = "RB_Thinkcrust";
-            this.RB_Thinkcrust.Size = new System.Drawing.Size(134, 27);
+            this.RB_Thinkcrust.Size = new System.Drawing.Size(132, 27);
             this.RB_Thinkcrust.TabIndex = 1;
             this.RB_Thinkcrust.TabStop = true;
             this.RB_Thinkcrust.Tag = "10";
-            this.RB_Thinkcrust.Text = "Think Crust";
+            this.RB_Thinkcrust.Text = "Thick Crust";
             this.RB_Thinkcrust.UseVisualStyleBackColor = true;
             this.RB_Thinkcrust.CheckedChanged += new System.EventHandler(this.RB_Thinkcrust_CheckedChanged);
             // 
@@ -515,6 +518,32 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(774, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(332, 18);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "How many pizzas would you like to order? ";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Enabled = false;
+            this.numericUpDown1.Location = new System.Drawing.Point(811, 107);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 9;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -522,6 +551,8 @@
             this.BackgroundImage = global::Project_Pizza.Properties.Resources.photo_2026_06_25_14_32_30;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1166, 651);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.B_OrderPizza);
             this.Controls.Add(this.GB_OrderSamary);
@@ -543,6 +574,7 @@
             this.GB_WhereTo.PerformLayout();
             this.GB_OrderSamary.ResumeLayout(false);
             this.GB_OrderSamary.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -584,6 +616,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label Lbl_Crust;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 

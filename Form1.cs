@@ -164,28 +164,34 @@ namespace Project_Pizza
             if (CB_ExtraCheese.Checked)
             {
                 sToppings = "Extra Cheese";
+                numericUpDown1.Enabled = true;
             }
             if (CB_Mushrooms.Checked)
             {
                 sToppings += ", Mushrooms";
+                numericUpDown1.Enabled = true;
             }
             if (CB_Olives.Checked)
             {
                 sToppings += ", Olives";
+                numericUpDown1.Enabled = true;
             }
             if (CB_Onion.Checked)
             {
 
                 sToppings += ", Onion";
+                numericUpDown1.Enabled = true;
             }
             if (CB_Tomatoes.Checked)
             {
                 sToppings += ", Tomatoes";
+                numericUpDown1.Enabled = true;
             }
 
             if (checkBox6.Checked)
             {
                 sToppings += ", Green Peppers";
+                numericUpDown1.Enabled = true;
 
             }
 
@@ -201,7 +207,7 @@ namespace Project_Pizza
         }
         void UpdateTotalPrice()
         {
-            Label_Price.Text = "$" + CalculateTotalPrice().ToString();
+            Label_Price.Text = "$" +( (float)numericUpDown1.Value* CalculateTotalPrice()).ToString();
 
 
 
@@ -311,6 +317,7 @@ namespace Project_Pizza
 
         private void CB_ExtraCheese_CheckedChanged(object sender, EventArgs e)
         {
+
             UpdateToppings();
 
         }
@@ -448,6 +455,19 @@ namespace Project_Pizza
 
         private void Toppings_Click(object sender, EventArgs e)
         {
+
+        }
+     
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+            if (numericUpDown1.Enabled)
+            {
+
+                UpdateTotalPrice();
+
+            }
+           
 
         }
     }
