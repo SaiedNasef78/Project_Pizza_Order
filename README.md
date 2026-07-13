@@ -8,7 +8,7 @@ A desktop application built using C# and Windows Forms that allows users to cust
 
 ## Main Interface
 
-![Pizza Order System](Images/Pizza_order.png)
+![Pizza Order System](Images/Pizza_Order.png)
 
 ---
 
